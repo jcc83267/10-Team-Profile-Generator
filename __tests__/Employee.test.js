@@ -34,6 +34,6 @@ test(' get email ', () => {
 test(' get role ', () => {
     const employee = new Employee('Dave', 123, 'something@gmail.com');
 
-    expect(employee.getRole()).toEqual(expect.any(String));
+    expect(employee.getRole()).toBe('Employee');
 });
 
