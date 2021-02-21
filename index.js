@@ -57,7 +57,7 @@ function userOptions() {
                 break;
 
             case "Yes, add an Intern":
-                //promptIntern();
+                promptIntern();
                 break;
             case "No, my team is done":
                 //function for team
@@ -98,8 +98,46 @@ function promptEngineer() {
             team.push(teamMember)
             console.log(teamMember);
             console.log(team)
+            userOptions()
             
         });
+}
+
+function promptIntern() {
+    inquirer
+    .prompt([{
+            type: "text",
+            name: "name",
+            message: "What is the Intern's name?"
+        },
+        {
+            type: "number",
+            name: "id",
+            message: "What is the Intern's ID Number?"
+        },
+        {
+            type: "text",
+            name: "email",
+            message: "What is the Intern's email address?"
+        },
+        {
+            type: "text",
+            name: "github",
+            message: "What is the Intern's current school?"
+        }])
+
+    .then(function (data) {
+        const name = data.name
+        const id = data.id
+        const email = data.email
+        const school = data.school
+        const teamMember = new Intern(name, id, email, school);
+        team.push(teamMember)
+        console.log(teamMember);
+        console.log(team)
+        //userOptions()
+        
+    });
 }
 
 promptManager();
