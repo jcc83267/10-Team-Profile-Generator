@@ -2,34 +2,63 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-const generateHtml = require('./src/page-template');
 const fs = require('fs');
-const { cpuUsage } = require('process');
 
 const team = [];
-
 
 function promptManager() {
     inquirer
         .prompt([{
             type: "text",
             name: "name",
-            message: "What is the Manager's name?"
+            message: "What is the Manager's name?",
+            validate: projectInput => {
+                if (projectInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a name!')
+                    return false;
+                }
+            }
         },
         {
             type: "number",
             name: "id",
-            message: "What is the Manager's ID Number?"
+            message: "What is the Manager's ID Number?",
+            validate: projectInput => {
+                if (projectInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a Id Number!')
+                    return false;
+                }
+            }
         },
         {
             type: "text",
             name: "email",
-            message: "What is the Manager's email address?"
+            message: "What is the Manager's email address?",
+            validate: projectInput => {
+                if (projectInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a email!')
+                    return false;
+                }
+            }
         },
         {
-            type: "number",
+            type: "text",
             name: "officeNumber",
-            message: "What is the Manager's Office Number?"
+            message: "What is the Manager's Office Number?",
+            validate: projectInput => {
+                if (projectInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a Office Number!')
+                    return false;
+                }
+            }
         }])
 
         .then(function (data) {
@@ -72,22 +101,54 @@ function promptEngineer() {
         .prompt([{
             type: "text",
             name: "name",
-            message: "What is the Engineer's name?"
+            message: "What is the Engineer's name?",
+            validate: projectInput => {
+                if (projectInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a name!')
+                    return false;
+                }
+            }
         },
         {
             type: "number",
             name: "id",
-            message: "What is the Engineer's ID Number?"
+            message: "What is the Engineer's ID Number?",
+            validate: projectInput => {
+                if (projectInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a Id Number!')
+                    return false;
+                }
+            }
         },
         {
             type: "text",
             name: "email",
-            message: "What is the Engineer's email address?"
+            message: "What is the Engineer's email address?",
+            validate: projectInput => {
+                if (projectInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a email!')
+                    return false;
+                }
+            }
         },
         {
             type: "text",
             name: "github",
-            message: "What is the Engineer's github?"
+            message: "What is the Engineer's github?",
+            validate: projectInput => {
+                if (projectInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a github!')
+                    return false;
+                }
+            }
         }])
 
         .then(function (data) {
@@ -106,22 +167,54 @@ function promptIntern() {
         .prompt([{
             type: "text",
             name: "name",
-            message: "What is the Intern's name?"
+            message: "What is the Intern's name?",
+            validate: projectInput => {
+                if (projectInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a name!')
+                    return false;
+                }
+            }
         },
         {
             type: "number",
             name: "id",
-            message: "What is the Intern's ID Number?"
+            message: "What is the Intern's ID Number?",
+            validate: projectInput => {
+                if (projectInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a Id Number!')
+                    return false;
+                }
+            }
         },
         {
             type: "text",
             name: "email",
-            message: "What is the Intern's email address?"
+            message: "What is the Intern's email address?",
+            validate: projectInput => {
+                if (projectInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a email!')
+                    return false;
+                }
+            }
         },
         {
             type: "text",
             name: "school",
-            message: "What is the Intern's current school?"
+            message: "What is the Intern's current school?",
+            validate: projectInput => {
+                if (projectInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a school!')
+                    return false;
+                }
+            }
         }])
 
         .then(function (data) {
