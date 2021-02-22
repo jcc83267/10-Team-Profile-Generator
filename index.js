@@ -22,14 +22,14 @@ function promptManager() {
             }
         },
         {
-            type: "number",
+            type: "text",
             name: "id",
-            message: "What is the Manager's ID Number?",
+            message: "What is the Manager's ID Number?(Please enter a number)",
             validate: projectInput => {
                 if (projectInput) {
                     return true;
                 } else {
-                    console.log('Please enter a Id Number!')
+                    console.log('Please enter a Id number!')
                     return false;
                 }
             }
@@ -50,7 +50,7 @@ function promptManager() {
         {
             type: "text",
             name: "officeNumber",
-            message: "What is the Manager's Office Number?",
+            message: "What is the Manager's Office Number?(Please enter a phone number)",
             validate: projectInput => {
                 if (projectInput) {
                     return true;
@@ -114,12 +114,12 @@ function promptEngineer() {
         {
             type: "number",
             name: "id",
-            message: "What is the Engineer's ID Number?",
+            message: "What is the Engineer's ID Number?(Please enter a number)",
             validate: projectInput => {
                 if (projectInput) {
                     return true;
                 } else {
-                    console.log('Please enter a Id Number!')
+                    console.log('Please enter a Id number!')
                     return false;
                 }
             }
@@ -180,12 +180,12 @@ function promptIntern() {
         {
             type: "number",
             name: "id",
-            message: "What is the Intern's ID Number?",
+            message: "What is the Intern's ID Number?(Please enter a number)",
             validate: projectInput => {
                 if (projectInput) {
                     return true;
                 } else {
-                    console.log('Please enter a Id Number!')
+                    console.log('Please enter a Id number!')
                     return false;
                 }
             }

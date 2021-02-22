@@ -9,7 +9,7 @@
 
 
 ## Purpose
-To create a Team profile generator that gives the team's basic information such as their roles and some basic contact information for each individual in the team. This project uses npm inquirer, jest, Node, and JavaScript  
+To create a Team profile generator that gives the team's basic information such as their roles and some basic contact information for each individual in the team. This project uses npm inquirer, jest, Node, and JavaScript
 
 ## Built-With
 - Node
