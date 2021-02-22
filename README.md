@@ -25,4 +25,4 @@ Screenshot of a sample HTML page
 ## Links
 Links to Video DEMO and Sample README
 Video DEMO: https://drive.google.com/file/d/1lkM6pXoIFK4rdU_agH313IbVfKMy6m6a/view   
-Sample README: https://jcc83267.github.io/10-Team-Profile-Generator/dist/index.html  
+Sample README: https://jcc83267.github.io/10-Team-Profile-Generator/dist/sampleIndex.html  
